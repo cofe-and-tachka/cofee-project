@@ -1,1 +1,200 @@
+/* Общие настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffebe9; /* Теплый бежевый фон */
+    color: #ffffff; /* Коричневый цвет текста */
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #79553c; /* Темно-коричневый цвет */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Тень для глубины */
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 48px; /* Увеличенное название */
+    margin-bottom: 10px;
+1)    color: white; /* Белый текст на коричневом фоне */
+}
+
+.slogan {
+    font-size: 24px; /* Слоган0; чуть меньшего размера */
+    color: white;
+    margin-top: 10px;
+}
+
+.description {
+    font-size: 18px; /* Средний размер шрифта */
+    color: white; /* Белый текст на тёмном фоне */
+    margin-top: 20px; /* Расстояние между слоганом и описанием */
+    line-height: 1.5; /* Интерлиньяж для удобочитаемости */
+    text-align: center; /* Центрирование текста */
+}
+
+.logo {
+    max-height: 80px; /* Увеличенная высота логотипа */
+    margin-top: 20px; /* Расстояние между слоганом и логотипом */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+.photos {
+    position: relative;
+    width: 320px; /* Устанавливаем ширину карусели */
+    height: 220px; /* Устанавливаем высоту карусели */
+    overflow: hidden; /* Скрыватем лишнеие изображения */
+    margin: 20px auto; /* Центрируем карусель по горизонтали */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Легкая тень вокруг карусели */
+    border-radius: 10px; /* Округлые края для карусели */
+}
+
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Растягиваем изображение по ширине карусели */
+    height: 100%; /* Растягиваем изображение по высоте карусели */
+    object-fit: cover; /* Обрезка изображения по размеру карусели */
+    opacity: 0; /* Прозрачные изображения по умолчанию */
+    transition: opacity 0.5s ease; /* Плавный переход прозрачности */
+    border-radius: 10px; /* Округление углов для красоты */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Легкая тень для каждого изображения */
+}
+
+.carousel img.active {
+    opacity: 1; /* Активное изображение полностью видимо */
+}
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.controls button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Анимация при наведении курсора */
+}
+
+.controls button:hover {
+    color: #ffedd8; /* Цвет при наведении курсора */
+}
+
+.map iframe {
+    width: 400px; /* Размер карты */
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons button {
+    background-color: #79553c; /* Насыщенный коричневый */
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttons button:hover {
+    background-color: #aa704c; /* Светлее при наведении */
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #764a17; /* Светло-коричневый оттенок */
+}
+
+
+
+
+
+
+
+.navbar {
+    background-color: #432818;
+    display: flex; /* Используем Flexbox для размещения элементов */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    justify-content: space-between; /* Размещаем элементы по краям */
+    padding: 10px; /*50px; Добавляем отступы для удобства */
+  }
+  
+  /* Логотип */
+  .logo img {
+    height: 50px; /* Высота изображения */
+    width: auto; /* Автоматическая ширина (чтобы сохранить пропорции) */
+  }
+  
+  /* Меню */
+  .menu {
+    list-style-type: none; /* Убираем маркеры списка */
+    margin: 0; /* Сбрасываем внешние отступы */
+    padding: 0; /* Сбрасываем внутренние отступы */
+    display: flex; /* Располагаем пункты меню горизонтально */
+  }
+  
+  .menu li {
+      list-style-type: none;
+      display: inline-block;
+      margin-right: 20px;
+  }
+  
+  .menu a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      transition: all 0.3s ease;
+  }
+  
+  .menu a:hover {
+      color: orange;
+  }
+  
+  .active {
+      font-weight: bold;
+  }
+  
+  .button {
+      background-color: #BB9457;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+      background-color: #CE6000;
+  }
