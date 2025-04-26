@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffebe9; /* Теплый бежевый фон */
+    background-color: #ffe6a7; /* Теплый бежевый фон */
     color: #ffffff; /* Коричневый цвет текста */
 }
 
@@ -24,10 +24,11 @@ body {
     align-items: center;
 }
 
+
 .header h1 {
     font-size: 48px; /* Увеличенное название */
     margin-bottom: 10px;
-1)    color: white; /* Белый текст на коричневом фоне */
+    color: white; /* Белый текст на коричневом фоне */
 }
 
 .slogan {
@@ -46,7 +47,7 @@ body {
 
 .logo {
     max-height: 80px; /* Увеличенная высота логотипа */
-    margin-top: 20px; /* Расстояние между слоганом и логотипом */
+
 }
 
 .content {
