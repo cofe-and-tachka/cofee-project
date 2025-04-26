@@ -1,0 +1,161 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6a7;
+    line-height:0;
+ 1.6;
+}
+
+/* Навигационное меню */
+.navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:1000;
+    position: fixed;
+    width: 100%;
+    background-color: #432818;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Логотип */
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Пункты меню */
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    color: orange;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.button {
+    background-color: #BB9457;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #CE6000;
+}
+
+/* Шапка сайта */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: var(--main-beige);
+}
+
+.header-img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Стили для корзины */
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 40px; /* Чтобы отступ сверху соответствовал фиксированному меню */
+}
+
+#cart-form h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #FFDAB9;
+    color: #432818;
+    font-weight: normal;
+}
+
+tr:nth-child(even) {
+    background-color: #FDF5E6;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#total-sum {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ce6000;
+}
+
+button[type="submit"] {
+    background-color: #BB9457;
+    color: white;
+    padding: 2px 50px;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #CE6000;
+}
+
+/* Адаптация для мобильных устройств */
+@media only screen and (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        font-size: 16px;
+    }
+}
