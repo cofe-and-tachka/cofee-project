@@ -1,129 +1,159 @@
+/* Общая палитра цветов */
 :root {
     --main-beige: #d6a557;         /* Основной бежевый */
     --light-beige: #ecbd7a;        /* Светлый бежевый */
     --dark-brown: #ffffff;          /* Темно-коричневый */
-    --medium-brown: #856a54da;     0.1);
-   /* Средне-коричневый */
+    --medium-brown: #856a54da;     /* Средне-коричневый */
     --white: #FFFDFB;               /* Белый */
-   18px;
- --coffee-bg: #d1b784;           /* Фоновый цвет кофе */
+    --coffee-bg: #d1b784;           /* Фоновый цвет кофе */
 }
 
-/* Общие стили */
+/* Оформление тела документа */
 body {
     font-family: 'Lato', sans-serif;
-    background-color: var(--coffee-bg); 
-    background-image: radial-gradient(var(--coffee-bg) 1%, transparent 1%),
-                      radial-gradient(var(--coffee-bg) 1%, transparent 1%);
+    background-color: #ffe6a7;
     background-position: 0 0, 25px 25px;
     background-size: 50px 50px;
-    color: var(--dark-brown);
+    color: var(--dark-brown); /* Цвет текста */
     margin: 0;
     padding: 20px;
 }
 
+/* Общий контейнер для контента */
 .container {
     max-width: 800px;
     margin: auto;
+    color: #000000;
     text-align: center;
 }
 
+/* Заголовок раздела отзывов */
 h1 {
-    color: var(--dark-brown);
     font-size: 32px;
     margin-bottom: 60px;
 }
 
+/* Карточка отзыва */
 .review {
-    background-color: var(--light-beige);
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(130, 89, 89, 0.1);
+    background-color: #BB9457; /* Светло-бежевый фон карточки */
+    border-radius: 12px;                 /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(130, 89, 89, 0.1); /* Тень вокруг карточки */
     padding: 24px;
     margin-bottom: 36px;
+    display: flex;                      /* Используем Flexbox для выравнивания */
+    justify-content: center;            /* Горизонтальное выравнивание по центру */
+    align-items: center;                /* Вертикальное выравнивание по центру */
 }
 
+.content {
+    display: flex;
+    flex-direction: column;             /* Расположим детали друг под другом */
+    align-items: center;                /* Центрируем содержимое */
+    gap: 1rem;                         /* Пространство между элементами */
+}
+
+/* Аватар пользователя */
 .avatar {
     width: 96px;
     height: 96px;
-    border-radius: 50%;
-    object-fit: cover;
+    border-radius: 50%;           /* Круглая форма фото */
+    object-fit: cover;            /* Сохраняет пропорции изображения */
     margin-bottom: 18px;
 }
 
+/* Звездочки рейтинга */
+.stars {
+    color: gold;                  /* Золотистый цвет */
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+/* Имя автора отзыва */
 .name {
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 12px;
 }
 
+/* Текст отзыва */
 .text {
-    line-height: 1.6;
+    line-height: 1.6;             /* Интервал между строками */
     font-size: 16px;
+    text-align: center;           /* Центрируем сам текст */
 }
 
-/* Стили для шапки */
+/* Шапка сайта */
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
-    background-color: var(--main-beige);
+    background-color: var(--main-beige); /* Бежевый фон шапки */
 }
 
+/* Картинка логотипа */
 .header-img {
     max-width: 200px;
     height: auto;
 }
+
+/* Навигационная панель */
 .navbar {
-    background-color: #432818;
-    display: flex; /* Используем Flexbox для размещения элементов */
-    align-items: center; /* Выравниваем элементы по вертикали */
-    justify-content: space-between; /* Размещаем элементы по краям */
-    padding: 10px; /*50px; Добавляем отступы для удобства */
-  }
-  
-  /* Логотип */
-  .logo img {
-    height: 50px; /* Высота изображения */
-    width: auto; /* Автоматическая ширина (чтобы сохранить пропорции) */
-  }
-  
-  /* Меню */
-  .menu {
-    list-style-type: none; /* Убираем маркеры списка */
-    margin: 0; /* Сбрасываем внешние отступы */
-    padding: 0; /* Сбрасываем внутренние отступы */
-    display: flex; /* Располагаем пункты меню горизонтально */
-  }
-  
-  .menu li {
-      list-style-type: none;
-      display: inline-block;
-      margin-right: 20px;
-  }
-  
-  .menu a {
-      text-decoration: none;
-      color: white;
-      font-size: 16px;
-      transition: all 0.3s ease;
-  }
-  
-  .menu a:hover {
-      color: orange;
-  }
-  
-  .active {
-      font-weight: bold;
-  }
-  
-  .button {
-      background-color: #BB9457;
-      padding: 10px 15px;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-  }
-  
-  .button:hover {
-      background-color: #CE6000;
-  }
+    background-color: #432818;   /* Коричневатый оттенок фона */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Лого */
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Меню навигации */
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Пункты меню */
+.menu li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Тексты ссылок меню */
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении на пункт меню */
+.menu a:hover {
+    color: orange;
+}
+
+/* Активный пункт меню */
+.active {
+    font-weight: bold;
+}
+
+/* Кнопка заказа */
+.button {
+    background-color: #BB9457; /* Более насыщенный коричневый */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении на кнопку */
+.button:hover {
+    background-color: #CE6000; /* Ещё более яркий оранжево-коричневый */
+}
