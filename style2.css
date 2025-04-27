@@ -31,12 +31,36 @@ body {
 }
 
 /* Логотип */
-.logo img {
+.logo {
+display: flex; /* Используем Flexbox для размещения элементов */
+align-items: center; /* Выравниваем элементы по вертикали */
+  cursor: pointer;
   height: 50px; /* Высота изображения */
   width: auto; /* Автоматическая ширина (чтобы сохранить пропорции) */
   color: white;
   font-size: 24px;
 }
+
+.anim {
+transition-property: transform;
+transition: transform .1s ease-in-out;
+}
+
+.anim:hover{
+    transition: transform .1s ease-in-out;
+    transform: scale(1.1);
+}
+
+.logo-text {
+    display: flex; /* Используем Flexbox для размещения элементов */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    font-size: 1.2em;
+    color: #BB9457;
+    margin-left: 10px;
+}
+
+
+
 
 /* Меню */
 .menu {
