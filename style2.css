@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffe6a7;
+    background-color: #eae2b7;
 }
 
 /* Стилизация меню */
@@ -54,9 +54,10 @@ transition: transform .1s ease-in-out;
 .logo-text {
     display: flex; /* Используем Flexbox для размещения элементов */
     align-items: center; /* Выравниваем элементы по вертикали */
-    font-size: 1.2em;
-    color: #BB9457;
+    font-size: 20px;
+    color: #a67c52;
     margin-left: 10px;
+    
 }
 
 
@@ -69,6 +70,8 @@ transition: transform .1s ease-in-out;
   padding: 0; /* Сбрасываем внутренние отступы */
   display: flex; /* Располагаем пункты меню горизонтально */
 }
+
+
 
 .menu li {
     list-style-type: none;
