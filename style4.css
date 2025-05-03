@@ -7,9 +7,9 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffe6a7;
+    background-color: #e7d29f;
     line-height:0;
- 1.6;
+
 }
 
 /* Навигационное меню */
@@ -61,7 +61,7 @@ body {
 }
 
 .button {
-    background-color: #BB9457;
+    background-color: #e09d30;
     padding: 10px 15px;
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -85,77 +85,55 @@ header {
     height: auto;
 }
 
-/* Стили для корзины */
+
+
+
+
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e7d29f;
+    margin: 0;
+    padding: 20px;
+}
+
 .container {
-    padding: 20px;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
-    margin-top: 40px; /* Чтобы отступ сверху соответствовал фиксированному меню */
-}
-
-#cart-form h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 25px;
-}
-
-th, td {
+    background-color: #e09d30;
     padding: 20px;
-    text-align: left;
-    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-th {
-    background-color: #FFDAB9;
-    color: #432818;
-    font-weight: normal;
+h1 {
+    text-align: center;
+    color: #333;
 }
 
-tr:nth-child(even) {
-    background-color: #FDF5E6;
+form label {
+    display: block;
+    margin-bottom: 10px;
 }
 
-input[type="number"] {
-    width: 50px;
-    padding: 5px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#total-sum {
-    font-size: 20px;
-    font-weight: bold;
-    color: #ce6000;
-}
-
-button[type="submit"] {
-    background-color: #BB9457;
-    color: white;
-    padding: 2px 50px;
+button {
+    background-color: #e7d29f;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
     border: none;
     border-radius: 50px;
-    font-size: 15px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
-    background-color: #CE6000;
+button:hover {
+    background-color: #e7d29f;
 }
 
-/* Адаптация для мобильных устройств */
-@media only screen and (max-width: 768px) {
-    table {
-        font-size: 14px;
-    }
-
-    button[type="submit"] {
-        font-size: 16px;
-    }
+#totalAmount {
+    font-size: 18px;
+    color: green;
 }
+
+
+
