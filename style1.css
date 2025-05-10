@@ -345,3 +345,62 @@ body {
     color: white;
     text-decoration: none;
     }
+
+
+
+   .coffee-shop-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.left-section {
+  flex: 1;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.menu-text {
+  background: #ffedd8; /* Новый цвет фона */
+  color: #000; /* Чёрный текст */
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.right-section {
+  flex: 1;
+  position: relative;
+}
+
+.right-section img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.about-text {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #ffedd8; /* Новый цвет фона */
+  color: #000; /* Чёрный текст */
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 60%;
+}
