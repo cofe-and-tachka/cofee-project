@@ -7,7 +7,11 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #eae2b7;
+    background-color: #f4f3ee;
+    background-image: url('back.png');
+
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Отключает повторение изображения */
 }
 
 /* Стилизация меню */
@@ -188,59 +192,59 @@ td {
 
 
 .footer {
-background: #79553c;
-color: white;
-padding: 40px 0px;
+    background: #79553c;
+    color: white;
+    padding: 40px 0px;
 }
 
 .footer-container {
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-max-width: 1200px;
-margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer-column {
-flex: 1;
-min-width: 250px;
-margin: 10px;
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
 }
 
 .footer-column h3 {
-margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .footer-column p {
-line-height: 1.6;
-font-size: 14px;
+    line-height: 1.6;
+    font-size: 14px;
 }
 
 .footer-column form {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-column input,
 .footer-column textarea {
-padding: 10px;
-margin-bottom: 10px;
-border: none;
-border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
 }
 
 .footer-column button {
-padding: 10px;
-background-color: #BB9457;
-color: white;
-border: none;
-cursor: pointer;
-border-radius: 5px;
-transition: background 0.3s;
+    padding: 10px;
+    background-color: #BB9457;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
 .footer-column button:hover {
-background-color: #f58c30;
+    background-color: #f58c30;
 }
 
 .footer-bc{
@@ -251,31 +255,29 @@ background-color: #f58c30;
 }
 
 .footer-bottom {
-
-
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap;
-max-width: 1200px;
-margin: 30px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 30px auto 0;
 }
 
 .footer-bottom .social-icons a {
-margin-right: 10px;
+    margin-right: 30px;
 }
 
 .footer-bottom .social-icons img {
-width: 32px;
-height: 32px;
+    width: 32px;
+    height: 32px;
 }
 
 .footer-bottom p {
-color: #ccc;
-font-size: 13px;
+    color: #ccc;
+    font-size: 13px;
 }
 
 .footer-bottom a {
-color: white;
-text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
