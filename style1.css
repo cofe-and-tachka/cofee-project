@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #eae2b7; /* Теплый бежевый фон */
+    font-family: 'Georgia', serif;
+    background-color: #f4f3ee;
     color: #ffffff; /* Коричневый цвет текста */
 }
 
@@ -54,89 +54,9 @@ body {
 
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px;
-}
 
-.photos {
-    position: relative;
-    width: 320px; /* Устанавливаем ширину карусели */
-    height: 220px; /* Устанавливаем высоту карусели */
-    overflow: hidden; /* Скрыватем лишнеие изображения */
-    margin: 20px auto; /* Центрируем карусель по горизонтали */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Легкая тень вокруг карусели */
-    border-radius: 10px; /* Округлые края для карусели */
-}
 
-.carousel img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Растягиваем изображение по ширине карусели */
-    height: 100%; /* Растягиваем изображение по высоте карусели */
-    object-fit: cover; /* Обрезка изображения по размеру карусели */
-    opacity: 0; /* Прозрачные изображения по умолчанию */
-    transition: opacity 0.5s ease; /* Плавный переход прозрачности */
-    border-radius: 10px; /* Округление углов для красоты */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Легкая тень для каждого изображения */
-}
 
-.carousel img.active {
-    opacity: 1; /* Активное изображение полностью видимо */
-}
-
-.controls {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 20px;
-}
-
-.controls button {
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    transition: color 0.3s ease; /* Анимация при наведении курсора */
-}
-
-.controls button:hover {
-    color: #ffedd8; /* Цвет при наведении курсора */
-}
-
-.map iframe {
-    width: 400px; /* Размер карты */
-    height: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.buttons {
-    display: flex;
-    gap: 20px;
-}
-
-.buttons button {
-    background-color: #79553c; /* Насыщенный коричневый */
-    color: white;
-    border-radius: 5px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.buttons button:hover {
-    background-color: #aa704c; /* Светлее при наведении */
-}
 
 
 
@@ -185,8 +105,6 @@ body {
       margin-left: 10px;
       
   }
-  
-  
   
   
   /* Меню */
@@ -252,6 +170,170 @@ body {
 
 
   
+
+
+
+
+  .left-section {
+    flex: 1;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+
+  
+  .menu-text {
+    background: #ffedd8; /* Новый цвет фона */
+    color: #000; /* Чёрный текст */
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .right-section {
+    flex: 1;
+    position: relative;
+  }
+  
+  .right-section img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .about-text {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: #ffedd8; /* Новый цвет фона */
+    color: #000; /* Чёрный текст */
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 60%;
+  }
+
+  .coffee-shop-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  
+
+
+
+
+
+
+
+
+  .mid-section {
+    color: #333;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  
+  .mid-cofe-div{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Выравниваем элементы по вертикали */
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  
+  .mid-cofe-png {
+    height: 350px;
+    width: 60%;
+    border-radius: 5px;
+  }
+  
+  .mid-cofe-txt {
+
+    width: 40%;
+    text-align: center;
+  }
+  
+  .mid-cofe-txt h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .mid-cofe-txt p {
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+
+  
+
+
+
+
+  .top-section {
+    color: #333;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  
+  .top-cofe-div{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Выравниваем элементы по вертикали */
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .top-cofe-png {
+    height: 350px;
+    width: 48%;
+    border-radius: 5px;
+  }
+  
+  .top-cofe-txt {
+
+    width: 48%;
+    text-align: right;
+  }
+  
+  .top-cofe-txt h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .top-cofe-txt p {
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
   .footer {
     background: #79553c;
@@ -345,62 +427,3 @@ body {
     color: white;
     text-decoration: none;
     }
-
-
-
-   .coffee-shop-container {
-  display: flex;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-.left-section {
-  flex: 1;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.menu-text {
-  background: #ffedd8; /* Новый цвет фона */
-  color: #000; /* Чёрный текст */
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.right-section {
-  flex: 1;
-  position: relative;
-}
-
-.right-section img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.about-text {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background: #ffedd8; /* Новый цвет фона */
-  color: #000; /* Чёрный текст */
-  padding: 15px;
-  border-radius: 8px;
-  max-width: 60%;
-}
