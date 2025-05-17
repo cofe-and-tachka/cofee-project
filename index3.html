@@ -3,82 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница отзывов</title>
+    <title>Кофейня | Меню</title>
     <link rel="stylesheet" href="style3.css">
 </head>
 <body>
+
     <nav class="navbar">
 
-        <!-- Контейнер для логотипа -->
-        <div class="left">
-            <div class="logo">
-                <a href="index1.html"> <img class = "anim" src="https://i.imgur.com/iXjeEeJ.png" alt="♨︎" height="50px" width="50px"/> </a>
-                <a style = "text-decoration: none;" href="index1.html"><h4 class="logo-text">Кофе и точка.</h4></a>
-            </div>
-            
+    <!-- Контейнер для логотипа -->
+    <div class="left">
+        <div class="logo">
+            <a href="index1.html"> <img class = "anim" src="https://i.imgur.com/iXjeEeJ.png" alt="♨︎" height="50px" width="50px"/> </a>
+            <a style = "text-decoration: none;" href="index1.html"><h4 class="logo-text">Cofe-co</h4></a>
         </div>
-    
-    
-        <!-- Контейнер для меню -->
-        <div>
-            <ul class="menu">
-    
-            <li><a href="index1.html">Главная</a></li>
-            <li><a href="index2.html" class="active">Меню</a></li>
-            <li><a href="index3.html">Отзывы</a></li>
-            <li><a href="https://www.youtube.com/watch?v=Cxmvq1MCR3c" class="button">Заказать онлайн</a></li>
-            </ul>
-        </div>
-        </nav>
-
-
-
         
-    <div class="container">
-        <h1>Отзывы</h1>
-        <div class="reviews">
-            <!-- Отзывы идут в ряд слева направо -->
-            <div class="review">
-                <div class="content">
-                    <img src="https://i.pinimg.com/736x/6a/2a/12/6a2a122c5873fc1ff33d53c2932b6700.jpg" alt="Avatar" class="avatar">
-                    <div class="details">
-                        <span class="stars">★★★★★</span>
-                        <p class="name">Анечка</p>
-                        <p class="text">Отличный сервис! Очень довольна качеством работы и вниманием к деталям.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="review">
-                <div class="content">
-                    <img src="https://klike.net/uploads/posts/2022-07/1658813253_1.jpg" alt="Avatar" class="avatar">
-                    <div class="details">
-                        <span class="stars">★★★★★</span>
-                        <p class="name">Пётр</p>
-                        <p class="text">Спасибо за вашу работу! Всё выполнено быстро и качественно.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="review">
-                <div class="content">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIqg_PFcDugO-dRNc9IEn-3ePK6xbufAXBig&s" alt="Avatar" class="avatar">
-                    <div class="details">
-                        <span class="stars">★★★★★</span>
-                        <p class="name">Артемий</p>
-                        <p class="text">Всё вкусно, спасибо!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="review">
-                <div class="content">
-                    <img src="https://example.com/path-to-image.jpg" alt="Avatar" class="avatar">
-                    <div class="details">
-                        <span class="stars">★★★★★</span>
-                        <p class="name">Муха666</p>
-                        <p class="text">Приятная атмосфера и вкуснейшая еда! Рекомендую всем попробовать!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+
+
+    <!-- Контейнер для меню -->
+    <div>
+        <ul class="menu">
+
+        <li><a href="index1.html" class="color-txt">Главная</a></li>
+        <li><a href="index2.html" class="color-txt" style="font-weight: bold;">Меню</a></li>
+        <li><a href="index3.html" class="color-txt">Отзывы</a></li>
+        <li><a href="https://www.youtube.com/watch?v=Cxmvq1MCR3c" class="button">Заказать онлайн</a></li>
+        </ul>
+    </div>
+    </nav>
+    
+    <!-- Секция меню -->
+    <section class="menu-section">
+        <h1>Отзывы клиентов</h1>
+        <h2></h2>
+
+        <!-- Виды кофе -->
+        <div class="testimonials">
+            <div class="testimonial-card">
+              <!-- Создаем блок для размещения аватара и имени вместе -->
+              <div class="header-info">
+                <img src="https://photo10.wambacdn.net/68/64/75/1799574686/2141185538_huge.jpg?hash=Z5MaQ5Ox4y9atMI1SFwjaQ&expires=64060578000&updated=1669278068" alt="Павел Иванов" class="avatar" />
+                <div>
+                  <h3>Павел Иванов</h3>
+                  <!-- <p class="position">Владелец студии спортивного танца «ГОРИЗОНТ»</p> -->
+                </div>
+              </div>
+              
+              <p class="testimonial-text">
+                Сегодня зашла сюда впервые, и теперь точно знаю, куда пойду снова! Очень уютная обстановка, доброжелательные бариста, потрясающий эспрессо — ну просто мечта!
+              </p>
+            </div>
+        
+            <div class="testimonial-card">
+              <div class="header-info">
+                <img src="https://vesti-yamal.ru/images/news/8276-06012023.jpg" alt="Екатерина Ошурова" class="avatar" />
+                <div>
+                  <h3>Екатерина Ошурова</h3>
+                </div>
+              </div>
+              
+              <p class="testimonial-text">
+                Лучшая кофейня в городе! Латте тут идеален — густое молоко, насыщенный аромат кофе, приятная музыка и спокойная атмосфера. Обязательно рекомендую друзьям и коллегам.
+              </p>
+            </div>
+        
+        
+        
+          <div class="testimonial-card">
+              <div class="header-info">
+                <img src="https://avatars.mds.yandex.net/i?id=0b707afbdaa0868b5bc63282d612515b_l-4944749-images-thumbs&n=13" alt="Екатерина Ошурова" class="avatar" />
+                <div>
+                  <h3>Александр Фимонов</h3>
+                </div>
+              </div>
+
+              <p class="testimonial-text">
+                Давно искал идеальное место для отдыха с книгой, и вот оно нашлось! Теперь моя субботняя традиция — вкусный американо и свежая выпечка в приятной атмосфере.
+            </p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="header-info">
+              <img src="https://i.pinimg.com/736x/6c/e7/c5/6ce7c5408dd8734461e0566068f60e36.jpg" alt="Екатерина Ошурова" class="avatar" />
+              <div>
+                <h3>Ангелина Новикова</h3>
+              </div>
+            </div>
+
+            <p class="testimonial-text">
+                Давно искала идеальное место для отдыха с книгой, и наконец-то оно нашлось! Теперь моя субботняя традиция — вкусный американо и свежая выпечка в приятной атмосфере. Спасибо X3
+          </p>
+      </div>
+    </section>
+
+    <div class="partner-otz">
+        
+        <div class="image-frame">
+          <img src="https://i0.wp.com/elizegan.com/wp-content/uploads/2024/04/Should-I-Ignore-Her-After-She-Cancels-Date.jpg?fit=1641%2C1096&ssl=1" class="main-image" />
+          <div class="card">
+            <h2>Алексей Сократов</h2>
+            <p class="position">Франчайзи партнёр сети студий «Super Grovery»</p>
+            <p>
+              Работа с кафе CofeCo приносит массу положительных эмоций! Гостеприимное отношение персонала, вкуснейшие напитки и отличная организация доставки помогают поддерживать высокий уровень мотивации сотрудников нашего офиса. Спасибо команде за профессионализм и внимание к деталям!
+            </p>
+          </div>
+        </div>
+      </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-column">
+            <h3>Cofe-co</h3>
+            <p>Мы предлагаем лучший сервис, уникальные напитки и хорошее настроение! Наш приоретет - ваш комфорт. В наших планах открыть заведения в Москве, Петербурге и других крупных городах России.</p> 
+          </div>
+          <div class="footer-column">
+            <h3>Контакты</h3>
+            <p>☎ +1(222)-333-44-55</p>
+            <p>⚑ г. Домодедово, Каширское шоссе, 3А</p>
+            <p>♨ cofeco.com</p>
+            <p>✉ cofeco.feedback@gmail.com</p>
+            <p>🛈 Часы работы: пн-пт 8:00 - 21:00, сб-вс 8:00 - 23:00</p>
+          </div>
+          <div class="footer-column">
+            <h3>Напишите нам</h3>
+            <form>
+              <input type="text" placeholder="Имя" required>
+              <input type="email" placeholder="E-mail" required>
+              <textarea placeholder="Мне понравилось потому что..." required></textarea>
+              <button type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bc">
+        <div class="footer-bottom">
+              <div class="social-icons">
+              <a href="https://www.facebook.com/"><img class = "anim" src="facebook.png" alt="Facebook"></a>
+              <a href="https://vk.com/"><img class = "anim" src="vk.png" alt="VK"></a>
+              <a href="http://x.com/"><img class = "anim" src="twitter.png" alt="Twitter"></a>
+              <a href="https://telegram.org/"><img class = "anim" src="tg.png" alt="TG"></a>
+              </div>
+              <p>© 2025 <a href="#" class="color-txt">CofeCo</a></p>
+          </div>
+        </div>
+      </footer>
+
 </body>
 </html>
