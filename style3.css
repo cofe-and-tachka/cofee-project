@@ -1,179 +1,406 @@
-/* Основные цвета */
-
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: 'Lato', sans-serif;
-    background-color: #eae2b7;
-    margin: 0;
-    padding: 20px;
+  font-family: "PT Sans Caption", sans-serif;
+  color: #333;
+  background-color: #f4f3ee;
+  background-image: url('back.png');
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Отключает повторение изображения */
 }
-/* Верхняя навигация */
+
+/* Стилизация меню */
+
+
 
 
 
 .navbar {
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    position: fixed;
-    width: 100%;
-    background-color: #432818;
-    display: flex; /* Используем Flexbox для размещения элементов */
-    align-items: center; /* Выравниваем элементы по вертикали */
-    justify-content: space-between; /* Размещаем элементы по краям */
-    padding: 10px; /*50px; Добавляем отступы для удобства */
-  }
-  
-  /* Логотип */
-  .logo {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  user-select: none;
+  position: fixed;
+  width: 100%;
+  background-color: #432818;
   display: flex; /* Используем Flexbox для размещения элементов */
   align-items: center; /* Выравниваем элементы по вертикали */
-    cursor: pointer;
-    height: 50px; /* Высота изображения */
-    width: auto; /* Автоматическая ширина (чтобы сохранить пропорции) */
-    color: white;
-    font-size: 24px;
-  }
+  justify-content: space-between; /* Размещаем элементы по краям */
+  padding: 10px; /*50px; Добавляем отступы для удобства */
+}
   
-  .anim {
-  transition-property: transform;
+/* Логотип */
+.logo {
+  display: flex; /* Используем Flexbox для размещения элементов */
+  align-items: center; /* Выравниваем элементы по вертикали */
+  cursor: pointer;
+  height: 50px; /* Высота изображения */
+  width: auto; /* Автоматическая ширина (чтобы сохранить пропорции) */
+  color: white;
+  font-size: 24px;
+}
+
+.anim {
+transition-property: transform;
+transition: transform .1s ease-in-out;
+}
+  
+.anim:hover{
   transition: transform .1s ease-in-out;
-  }
+  transform: scale(1.1);
+}
   
-  .anim:hover{
-      transition: transform .1s ease-in-out;
-      transform: scale(1.1);
-  }
-  
-  .logo-text {
-      display: flex; /* Используем Flexbox для размещения элементов */
-      align-items: center; /* Выравниваем элементы по вертикали */
-      font-size: 20px;
-      color: #a67c52;
-      margin-left: 10px;
-      
-  }
-  
-  
+.logo-text {
+  display: flex; /* Используем Flexbox для размещения элементов */
+  align-items: center; /* Выравниваем элементы по вертикали */
+  font-size: 20px;
+  color: #a67c52;
+  margin-left: 10px;
+}
   
   
   /* Меню */
-  .menu {
-    list-style-type: none; /* Убираем маркеры списка */
-    margin: 0; /* Сбрасываем внешние отступы */
-    padding: 0; /* Сбрасываем внутренние отступы */
-    display: flex; /* Располагаем пункты меню горизонтально */
-  }
-  
-  
-  
-  .menu li {
-      list-style-type: none;
-      display: inline-block;
-      margin-right: 20px;
-  }
-  
-  .menu a {
-      text-decoration: none;
-      color: white;
-      font-size: 16px;
-      transition: all 0.3s ease;
-  }
-  
-  .menu a:hover {
-      color: orange;
-  }
-  
-  .active {
-      font-weight: bold;
-  }
-  
-  .button {
-      background-color: #BB9457;
-      padding: 10px 15px;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-  }
-  
-  .button:hover {
-      background-color: #CE6000;
-  }
-
-
-
-
-
-
-
-
-
-.container {
-    max-width: 800px;
-    margin: auto;
-    color: #000000;
-    text-align: center;
+.menu {
+  list-style-type: none; /* Убираем маркеры списка */
+  margin: 0; /* Сбрасываем внешние отступы */
+  padding: 0; /* Сбрасываем внутренние отступы */
+  display: flex; /* Располагаем пункты меню горизонтально */
 }
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 30px;
+  
+  
+.menu li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 20px;
+}
+  
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+  
+.color-txt {
+  color: white;
+  transition: all 0.3s ease;
 }
 
-.reviews {
-    display: flex;               /* Используем Flexbox для горизонтальной компоновки */
-    justify-content: space-evenly; /* Равномерное распределение пространства между отзывами */
-    gap: 20px;                  /* Небольшое расстояние между отзывами */
+.color-txt:hover {
+  color: #f58c30;
 }
 
 
-
-
-
-
-
-
-.review {
+.button {
     background-color: #BB9457;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(130, 89, 89, 0.1);
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 200px;            /* Минимальная ширина карточки */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-.content {
+.button:hover {
+    background-color: #f58c30;
+}
+
+
+
+
+
+.menu-section {
+
+    margin: 50px auto;
+    padding: 30px;
+
+
+}
+
+.menu-section h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    margin-top: 60px;
+}
+
+
+
+
+
+.testimonials {
+    margin-top: 100px;
     display: flex;
-    flex-direction: column;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background-color: #c8ae8b;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Изменяем расположение фото рядом с именем */
+.header-info {
+    display: flex;
     align-items: center;
-    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .avatar {
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 12px;
+    margin-right: 1rem;
 }
 
-.stars {
-    color: gold;
-    font-size: 16px;
-    margin-bottom: 8px;
+h3 {
+    margin: 0;
+    font-size: 1.2rem;
 }
 
-.name {
-    font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 8px;
+.position {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 0.5rem;
 }
 
-.text {
+.testimonial-text {
+    font-size: 0.95rem;
     line-height: 1.4;
-    font-size: 14px;
-    text-align: center;
 }
 
+.emoji {
+    font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.partner-otz {
+    background: linear-gradient(to bottom, #1a1a1a, #2b2b2b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+
+  }
+  
+  .image-frame {
+    position: relative;
+    max-width: 800px;
+  }
+  
+  .image-frame::before,
+  .image-frame::after {
+    content: "";
+    position: absolute;
+    background-color: #c8ae8b;
+    z-index: 0;
+    border-radius: 10px;
+  }
+  
+  .image-frame::before {
+    width: 200px;
+    height: 200px;
+    bottom: -20px;
+    left: -20px;
+  }
+  
+  .image-frame::after {
+    width: 200px;
+    height: 200px;
+    top: -20px;
+    right: -20px;
+  }
+  
+  .main-image {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    bottom: -50px;
+    right: 30px;
+    max-width: 400px;
+    z-index: 2;
+  }
+  
+  .card h2 {
+    font-size: 22px;
+    color: #a88b68;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 14px;
+  
+    margin-bottom: 10px;
+  }
+  
+  .card small {
+    display: block;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .card a {
+    color: #755f43;
+    text-decoration: underline;
+  }
+  
+  .card button {
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #a88b68;
+    border-radius: 25px;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .card button:hover {
+    background: #a88b68;
+    color: #fff;
+  }
+  
+  .position {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 0.5rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background: #79553c;
+    color: white;
+    padding: 40px 0px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.footer-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column input,
+.footer-column textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+.footer-column button {
+    padding: 10px;
+    background-color: #BB9457;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.footer-column button:hover {
+    background-color: #f58c30;
+}
+
+.footer-bc{
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #432818;
+    width: 100%;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 30px auto 0;
+}
+
+.footer-bottom .social-icons a {
+    margin-right: 30px;
+}
+
+.footer-bottom .social-icons img {
+    width: 32px;
+    height: 32px;
+}
+
+.footer-bottom p {
+    color: #ccc;
+    font-size: 13px;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+}
