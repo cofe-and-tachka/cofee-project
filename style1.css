@@ -1,57 +1,101 @@
 /* Общие настройки */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Georgia', serif;
-    background-color: #f4f3ee;
-    color: #ffffff; /* Коричневый цвет текста */
+  font-family: "PT Sans Caption", sans-serif;
+  background-color: #f4f3ee;
+  color: #ffffff; /* Коричневый цвет текста */
+  background-image: url('back2.png');
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Отключает повторение изображения */
 }
 
 .header {
-    text-align: center;
-    padding: 100px;
-    background-image: url('cafe.png');
-    background-size: cover; /* Масштабирует изображение, чтобы оно полностью заполняло контейнер */
-    background-position: center; /* Центрирует изображение */
-    background-repeat: no-repeat; /* Отключает повторение изображения */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Тень для глубины */
+  text-align: center;
+  padding: 120px;
+  background-image: url('cofe.jpg');
+  /* background-attachment: fixed; */
+  background-size: cover; /* Масштабирует изображение, чтобы оно полностью заполняло контейнер */
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Отключает повторение изображения */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Тень для глубины */
 }
 
-.title-container {
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+
+
+.conta {
+
+  height: 300px;
+  margin-top: 40px;
+  margin-left: 30vh;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Выравниваем элементы по вертикали */
 }
+
+.text-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 30px; 
+  border-radius: 20px;
+  width: 300px;
+
+}
+
+.text-box p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+
+.menu-button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.menu-button:hover {
+  background-color: #e0e0e0;
+}
+
+
+
+
 
 
 .header h1 {
-    font-size: 48px; /* Увеличенное название */
-    margin-bottom: 10px;
-    color: white; /* Белый текст на коричневом фоне */
+  font-size: 48px; /* Увеличенное название */
+  margin-bottom: 10px;
+  color: white; /* Белый текст на коричневом фоне */
 }
 
 .slogan {
-    font-size: 24px; /* Слоган0; чуть меньшего размера */
-    color: white;
-    margin-top: 10px;
+  font-size: 24px; /* Слоган0; чуть меньшего размера */
+  color: white;
+  margin-top: 10px;
 }
 
 .description {
-    font-size: 18px; /* Средний размер шрифта */
-    color: white; /* Белый текст на тёмном фоне */
-    margin-top: 20px; /* Расстояние между слоганом и описанием */
-    line-height: 1.5; /* Интерлиньяж для удобочитаемости */
-    text-align: center; /* Центрирование текста */
+  max-width: 1000px;
+  font-size: 18px; /* Средний размер шрифта */
+  color: white; /* Белый текст на тёмном фоне */
+  margin-top: 20px; /* Расстояние между слоганом и описанием */
+  line-height: 1.5; /* Интерлиньяж для удобочитаемости */
+  text-align: center; /* Центрирование текста */
 }
 
 .logo {
-    max-height: 80px; /* Увеличенная высота логотипа */
-
+  max-height: 80px; /* Увеличенная высота логотипа */
 }
 
 
@@ -62,368 +106,394 @@ body {
 
 
 
-  .navbar {
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    position: fixed;
-    width: 100%;
-    background-color: #432818;
-    display: flex; /* Используем Flexbox для размещения элементов */
-    align-items: center; /* Выравниваем элементы по вертикали */
-    justify-content: space-between; /* Размещаем элементы по краям */
-    padding: 10px; /*50px; Добавляем отступы для удобства */
-  }
-  
-  /* Логотип */
-  .logo {
+.navbar {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  user-select: none;
+  position: fixed;
+  width: 100%;
+  background-color: #432818;
   display: flex; /* Используем Flexbox для размещения элементов */
   align-items: center; /* Выравниваем элементы по вертикали */
-    cursor: pointer;
-    height: 50px; /* Высота изображения */
-    width: auto; /* Автоматическая ширина (чтобы сохранить пропорции) */
-    color: white;
-    font-size: 24px;
-  }
+  justify-content: space-between; /* Размещаем элементы по краям */
+  padding: 10px; /*50px; Добавляем отступы для удобства */
+}
   
-  .anim {
-  transition-property: transform;
+/* Логотип */
+.logo {
+  display: flex; /* Используем Flexbox для размещения элементов */
+  align-items: center; /* Выравниваем элементы по вертикали */
+  cursor: pointer;
+  height: 50px; /* Высота изображения */
+  width: auto; /* Автоматическая ширина (чтобы сохранить пропорции) */
+  color: white;
+  font-size: 24px;
+}
+
+.anim {
+transition-property: transform;
+transition: transform .1s ease-in-out;
+}
+  
+.anim:hover{
   transition: transform .1s ease-in-out;
-  }
+  transform: scale(1.1);
+}
   
-  .anim:hover{
-      transition: transform .1s ease-in-out;
-      transform: scale(1.1);
-  }
-  
-  .logo-text {
-      display: flex; /* Используем Flexbox для размещения элементов */
-      align-items: center; /* Выравниваем элементы по вертикали */
-      font-size: 20px;
-      color: #a67c52;
-      margin-left: 10px;
-      
-  }
+.logo-text {
+  display: flex; /* Используем Flexbox для размещения элементов */
+  align-items: center; /* Выравниваем элементы по вертикали */
+  font-size: 20px;
+  color: #a67c52;
+  margin-left: 10px;
+}
   
   
   /* Меню */
-  .menu {
-    list-style-type: none; /* Убираем маркеры списка */
-    margin: 0; /* Сбрасываем внешние отступы */
-    padding: 0; /* Сбрасываем внутренние отступы */
-    display: flex; /* Располагаем пункты меню горизонтально */
-  
-    animation-duration: 1s;
-    animation-name: slidein;
-  }
-  
-  
-  @keyframes slidein {
-      from {
-        margin-left: 100%;
-        width: 200%;
-      }
-    
-      to {
-        margin-left: 0%;
-        width: 100%;
-      }
-  }
+.menu {
+  list-style-type: none; /* Убираем маркеры списка */
+  margin: 0; /* Сбрасываем внешние отступы */
+  padding: 0; /* Сбрасываем внутренние отступы */
+  display: flex; /* Располагаем пункты меню горизонтально */
 
+
+}
   
-  
-  .menu li {
-      list-style-type: none;
-      display: inline-block;
-      margin-right: 20px;
-  }
-  
-  .menu a {
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-  }
-  
-  .color-txt {
-      color: white;
-      transition: all 0.3s ease;
-  }
-  
-  .color-txt:hover {
-      color: #f58c30;
-  }
-  
-  
-  
-  .button {
-      background-color: #BB9457;
-      padding: 10px 15px;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-  }
-  
-  .button:hover {
-      background-color: #f58c30;
-  }
   
 
 
+  
+  
+.menu li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 20px;
+}
+  
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+  
+.color-txt {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.color-txt:hover {
+  color: #f58c30;
+}
+
+  
+  
+.button {
+  background-color: #BB9457;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #f58c30;
+}
   
 
 
 
 
-  .left-section {
-    flex: 1;
-  }
-  
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
-  }
+.button-sq {
+  color: #333;
+  text-decoration: none;
+  border: 2px solid #BB9457;
+  background-color: none;
+  width: fit-content;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  font-family: "PT Sans Caption", sans-serif;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.button-sq:hover {
+  color: white;
+  background-color: #BB9457;
+}
   
 
-  
-  .menu-text {
-    background: #ffedd8; /* Новый цвет фона */
-    color: #000; /* Чёрный текст */
-    padding: 15px;
-    border-radius: 8px;
+.button-sq:active {
+  transform: scale(.97);
+  transition: transform .10s ease-in;
+}
+
+
+.top1sec {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+.top2sec {
+  animation-duration: 1s;
+  animation-name: slidein2;
+}
+
+.top-section {
+
+  font-family: 'Zimra', serif;
+  color: #333;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.top-cofe-div{
+
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Выравниваем элементы по вертикали */
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+@keyframes slidein {
+  from {
+    margin-left: 15%;
+
   }
-  
-  .right-section {
-    flex: 1;
-    position: relative;
+
+  to {
+    margin-left: 0%;
+
   }
+}
+@keyframes slidein2 {
+  from {
+    margin-left: -15%;
+
+  }
+
+  to {
+    margin-left: 0%;
+
+  }
+}
+
+.top-cofe-png {
+  object-fit: cover;
+  height: 300px;
+  width: 48%;
+  border-radius: 5px;
+}
+
+.top-cofe-txt {
+
+  width: 48%;
+  text-align: right;
+}
+
+.top-cofe-txt h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.top-cofe-txt p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
   
-  .right-section img {
+.hidden-image {
+  position: relative;
+  opacity: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+.alt:hover .hidden-image {
+    opacity: 1;
+}
+
+
+
+
+.fix-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 100px;
+  background-image: url('cofe2.jpg');
+  background-attachment: fixed;
+  background-size: cover; /* Масштабирует изображение, чтобы оно полностью заполняло контейнер */
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Отключает повторение изображения */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Тень для глубины */
+}
+
+
+
+
+
+
+
+
+.mid-section {
+  font-family: 'Zimra', serif;
+  color: #333;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+  
+.mid-cofe-div{
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Выравниваем элементы по вертикали */
+  margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.mid-cofe-png {
+  object-fit: cover;
+  height: 350px;
+  width: 60%;
+  border-radius: 5px;
+}
+
+.mid-cofe-txt {
+
+  width: 40%;
+  text-align: center;
+}
+
+.mid-cofe-txt h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.mid-cofe-txt p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  background: #79553c;
+  color: white;
+  padding: 40px 0px;
+}
+  
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+  
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+  
+.footer-column h3 {
+  margin-bottom: 15px;
+}
+  
+.footer-column p {
+  line-height: 1.6;
+  font-size: 14px;
+}
+  
+.footer-column form {
+  display: flex;
+  flex-direction: column;
+}
+  
+.footer-column input,
+.footer-column textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px;
+}
+  
+.footer-column button {
+  padding: 10px;
+  background-color: #BB9457;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+  
+.footer-column button:hover {
+  background-color: #f58c30;
+}
+  
+.footer-bc{
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #432818;
     width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
+}
   
-  .about-text {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background: #ffedd8; /* Новый цвет фона */
-    color: #000; /* Чёрный текст */
-    padding: 15px;
-    border-radius: 8px;
-    max-width: 60%;
-  }
-
-  .coffee-shop-container {
-    display: flex;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 30px auto 0;
+}
   
+.footer-bottom .social-icons a {
+  margin-right: 30px;
+}
   
-
-
-
-
-
-
-
-
-  .mid-section {
-    color: #333;
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
+.footer-bottom .social-icons img {
+  width: 32px;
+  height: 32px;
+}
   
-  .mid-cofe-div{
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Выравниваем элементы по вертикали */
-    margin: 0 auto;
-    margin-bottom: 40px;
-    margin-top: 40px;
-  }
+.footer-bottom p {
+  color: #ccc;
+  font-size: 13px;
+}
   
-  .mid-cofe-png {
-    height: 350px;
-    width: 60%;
-    border-radius: 5px;
-  }
-  
-  .mid-cofe-txt {
-
-    width: 40%;
-    text-align: center;
-  }
-  
-  .mid-cofe-txt h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .mid-cofe-txt p {
-    margin: 10px 0;
-    line-height: 1.5;
-  }
-
-  
-
-
-
-
-  .top-section {
-    color: #333;
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
-  
-  .top-cofe-div{
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Выравниваем элементы по вертикали */
-    margin: 0 auto;
-    margin-bottom: 40px;
-    margin-top: 40px;
-  }
-
-  .gallery img {
-    width: 100%;
-    height: 175px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-  .top-cofe-png {
-    height: 350px;
-    width: 48%;
-    border-radius: 5px;
-  }
-  
-  .top-cofe-txt {
-
-    width: 48%;
-    text-align: right;
-  }
-  
-  .top-cofe-txt h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .top-cofe-txt p {
-    margin: 10px 0;
-    line-height: 1.5;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-  .footer {
-    background: #79553c;
-    color: white;
-    padding: 40px 0px;
-    }
-    
-    .footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    }
-    
-    .footer-column {
-    flex: 1;
-    min-width: 250px;
-    margin: 10px;
-    }
-    
-    .footer-column h3 {
-    margin-bottom: 15px;
-    }
-    
-    .footer-column p {
-    line-height: 1.6;
-    font-size: 14px;
-    }
-    
-    .footer-column form {
-    display: flex;
-    flex-direction: column;
-    }
-    
-    .footer-column input,
-    .footer-column textarea {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 3px;
-    }
-    
-    .footer-column button {
-    padding: 10px;
-    background-color: #BB9457;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
-    }
-    
-    .footer-column button:hover {
-    background-color: #f58c30;
-    }
-    
-    .footer-bc{
-        margin-top: 30px;
-        padding-top: 20px;
-        border-top: 1px solid #432818;
-        width: 100%;
-    }
-    
-    .footer-bottom {
-    
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 30px auto 0;
-    }
-    
-    .footer-bottom .social-icons a {
-    margin-right: 30px;
-    }
-    
-    .footer-bottom .social-icons img {
-    width: 32px;
-    height: 32px;
-    }
-    
-    .footer-bottom p {
-    color: #ccc;
-    font-size: 13px;
-    }
-    
-    .footer-bottom a {
-    color: white;
-    text-decoration: none;
-    }
+.footer-bottom a {
+  color: white;
+  text-decoration: none;
+}
