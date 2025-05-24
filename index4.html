@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кофейня | Заказ</title>
+    <title>Кофейня | Главная страница</title>
     <link rel="stylesheet" href="style4.css">
 </head>
 <body>
@@ -21,24 +21,36 @@
     <div>
         <ul class="menu">
             <li><a href="index1.html">Главная</a></li>
-            <li><a href="index2.html" class="active">Заказ</a></li>
+            <li><a href="index2.html" class="active">Меню</a></li>
             <li><a href="index3.html">Отзывы</a></li>
             <li><a href="https://www.youtube.com/watch?v=Cxmvq1MCR3c" class="button">Заказать онлайн</a></li>
         </ul>
     </div>
 </nav>
 
-<div class="container">
-    <h1>Выбор товаров</h1>
-    <form id="orderForm">
-        <label for="item1"><input type="checkbox" id="item1" data-price="100"> Товар №1 (100 руб.)</label><br>
-        <label for="item2"><input type="checkbox" id="item2" data-price="200"> Товар №2 (200 руб.)</label><br>
-        <label for="item3"><input type="checkbox" id="item3" data-price="300"> Товар №3 (300 руб.)</label><br>
-        <hr>
-        <strong>Итого:</strong> <span id="totalAmount">0 руб.</span>
-        <br><br>
-        <button type="button" onclick="placeOrder()">Оформить заказ</button>
-    </form>
+<div class="wrapper">
+    <div class="content">
+        <div class="welcome-block">
+            <h1>Добро пожаловать!</h1>
+            <p>Здесь вы можете ознакомиться с нашим ассортиментом кофе и заказать любимые напитки прямо здесь!</p>
+        </div>
+        <div class="advertisement">
+            <img src="https://sun9-19.userapi.com/impg/vRA_UBFJ9mguw-ul8g6bD_tc39SHRDbzpGmvLQ/f6c0h98THbg.jpg?size=1280x720&quality=95&sign=a6c2a66724d9fde3c0feed1de762ba3f&c_uniq_tag=9w4qEOVvu67GM_NaCFFVsizWYZ8fHv1V8WUyS0DWj7I&type=album" alt="Рекламная акция" />
+        </div>
+    </div>
+
+    <aside class="sidebar">
+        <h2>Выбор товаров</h2>
+        <form id="orderForm">
+            <label for="item1"><input type="checkbox" id="item1" data-price="100"> Товар №1 (100 руб.)</label><br>
+            <label for="item2"><input type="checkbox" id="item2" data-price="200"> Товар №2 (200 руб.)</label><br>
+            <label for="item3"><input type="checkbox" id="item3" data-price="300"> Товар №3 (300 руб.)</label><br>
+            <hr>
+            <strong>Итого:</strong> <span id="totalAmount">0 руб.</span>
+            <br><br>
+            <button type="button" onclick="placeOrder()">Оформить заказ</button>
+        </form>
+    </aside>
 </div>
 
 <script src="scripts.js"></script>
