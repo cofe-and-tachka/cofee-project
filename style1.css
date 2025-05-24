@@ -29,23 +29,20 @@ body {
 
 
 .conta {
-
+  max-width: 1000px;
   height: 300px;
-  margin-top: 40px;
-  margin-left: 30vh;
-  
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Выравниваем элементы по вертикали */
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .text-box {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 30px; 
+  padding: 20px; 
   border-radius: 20px;
   width: 300px;
-
 }
 
 .text-box p {
@@ -240,7 +237,6 @@ transition: transform .1s ease-in-out;
 }
 
 .top-section {
-
   font-family: 'Zimra', serif;
   color: #333;
   margin-top: 100px;
@@ -248,7 +244,6 @@ transition: transform .1s ease-in-out;
 }
 
 .top-cofe-div{
-
   max-width: 1000px;
   display: flex;
   justify-content: space-between;
