@@ -1,59 +1,85 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кофейня | Меню</title>
+    <title>Кофейня | Заказ</title>
     <link rel="stylesheet" href="style4.css">
 </head>
 <body>
 
-    <nav class="navbar">
-
-    <!-- Контейнер для логотипа -->
+<!-- Навигационная панель -->
+<nav class="navbar">
     <div class="left">
         <div class="logo">
-            <a href="index1.html"> <img class = "anim" src="https://i.imgur.com/iXjeEeJ.png" alt="♨︎" height="50px" width="50px"/> </a>
-            <a style = "text-decoration: none;" href="index1.html"><h4 class="logo-text">Кофе и точка.</h4></a>
+            <a href="index1.html">
+                <img class="anim" src="https://i.imgur.com/iXjeEeJ.png" alt="♨︎" height="50px" width="50px"/>
+            </a>
         </div>
-        
     </div>
-
-
-    <!-- Контейнер для меню -->
+    
     <div>
         <ul class="menu">
-
-        <li><a href="index1.html">Главная</a></li>
-        <li><a href="index2.html" class="active">Меню</a></li>
-        <li><a href="index3.html">Отзывы</a></li>
-        <li><a href="https://www.youtube.com/watch?v=Cxmvq1MCR3c" class="button">Заказать онлайн</a></li>
+            <li><a href="index1.html">Главная</a></li>
+            <li><a href="index2.html" class="active">Заказ</a></li>
+            <li><a href="index3.html">Отзывы</a></li>
+            <li><a href="https://www.youtube.com/watch?v=Cxmvq1MCR3c" class="button">Заказать онлайн</a></li>
         </ul>
     </div>
-    </nav>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Страница оплаты</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Выбор товаров</h1>
-        <form id="orderForm">
-            <label for="item1"><input type="checkbox" id="item1" data-price="100"> Товар №1 (100 руб.)</label><br>
-            <label for="item2"><input type="checkbox" id="item2" data-price="200"> Товар №2 (200 руб.)</label><br>
-            <label for="item3"><input type="checkbox" id="item3" data-price="300"> Товар №3 (300 руб.)</label><br>
-            <hr>
-            <strong>Итого:</strong> <span id="totalAmount">0 руб.</span>
-            <br><br>
-            <button type="button" onclick="placeOrder()">Оформить заказ</button>
-        </form>
+</nav>
+
+<div class="container">
+    <h1>Выбор товаров</h1>
+    <form id="orderForm">
+        <label for="item1"><input type="checkbox" id="item1" data-price="100"> Товар №1 (100 руб.)</label><br>
+        <label for="item2"><input type="checkbox" id="item2" data-price="200"> Товар №2 (200 руб.)</label><br>
+        <label for="item3"><input type="checkbox" id="item3" data-price="300"> Товар №3 (300 руб.)</label><br>
+        <hr>
+        <strong>Итого:</strong> <span id="totalAmount">0 руб.</span>
+        <br><br>
+        <button type="button" onclick="placeOrder()">Оформить заказ</button>
+    </form>
+</div>
+
+<script src="scripts.js"></script>
+
+<!-- Подвал страницы -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Cofe-Co</h3>
+            <p>Мы предлагаем лучший сервис, уникальные напитки и хорошее настроение! Наш приоритет — ваш комфорт. Планируем открытие заведений в Москве, Санкт-Петербурге и других крупных городах России.</p> 
+        </div>
+        <div class="footer-column">
+            <h3>Контакты</h3>
+            <p>☎ +7(977)966-61-98</p>
+            <p>⚑ г. Домодедово, Каширское шоссе, 3А</p>
+            <p>♨ cofeco.com</p>
+            <p>✉ cofeco.feedback@gmail.com</p>
+            <p>🛈 Часы работы: пн-пт 8:00–21:00, сб-вс 8:00–23:00</p>
+        </div>
+        <div class="footer-column">
+            <h3>Напишите нам</h3>
+            <form action="#">
+              <input type="text" placeholder="Имя" required>
+              <input type="email" placeholder="E-mail" required>
+              <textarea placeholder="Ваш отзыв..."></textarea>
+              <button type="submit">Отправить</button>
+            </form>
+        </div>
     </div>
-    <script src="scripts.js"></script>
+    <div class="footer-bc">
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"><img class="anim" src="facebook.png" alt="Facebook"></a>
+                <a href="https://vk.com/" target="_blank"><img class="anim" src="vk.png" alt="VK"></a>
+                <a href="http://x.com/" target="_blank"><img class="anim" src="twitter.png" alt="Twitter"></a>
+                <a href="https://telegram.org/" target="_blank"><img class="anim" src="tg.png" alt="Telegram"></a>
+            </div>
+            <p>© 2025 Cofe-Co</p>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
-
-
