@@ -11,6 +11,36 @@ body {
     line-height: normal;
 }
 
+/* Блок приветствия с рамкой */
+.welcome-block {
+    background-color: #72482f;
+    padding: 10px;
+    border: 2px solid #bdbdc1;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+    text-align: center;
+}
+
+.welcome-block h1 {
+    color: #ffffff;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.welcome-block p {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Реклама (изображение) */
+.advertisement img {
+    width: 100%; /* Растягиваем изображение на всю ширину родителя */
+    border-radius: 10px; /* Округлые углы */
+    object-fit: cover; /* Поддерживает соотношение сторон */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+}
+
 /* Навигационное меню */
 .navbar {
     position: fixed;
@@ -70,27 +100,38 @@ body {
     background-color: #ce6000;
 }
 
-/* Стиль контейнера формы заказа */
-.container {
-    max-width: 600px;
-    margin: 80px auto;
-    background-color: #432818;
+/* Основной контейнер страницы */
+.wrapper {
+    display: flex;
+    gap: 20px;
+    padding-top: 100px; /* Расстояние от навигационной панели */
+    padding-left: 16%; /* Левое поле */
+    padding-right: 5%; /* Правое поле */
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #68432c;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-h1 {
-    text-align: center;
+.sidebar h2 {
     color: #fff9f9;
+    margin-bottom: 10px;
 }
 
-form label {
+.sidebar form label {
     display: block;
     margin-bottom: 10px;
 }
 
-button {
+.sidebar button {
     background-color: #fff8f8;
     color: rgb(0, 0, 0);
     padding: 10px 20px;
@@ -99,11 +140,11 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.sidebar button:hover {
     background-color: #bb9457;
 }
 
-#totalAmount {
+.sidebar #totalAmount {
     font-size: 18px;
     color: rgb(255, 255, 255);
 }
@@ -190,7 +231,7 @@ button:hover {
 }
 
 .footer-bottom p {
-    color: #ccc;
+    color: #ffffff;
     font-size: 13px;
 }
 
@@ -199,10 +240,8 @@ button:hover {
     text-decoration: none;
 }
 
-body 
-background-image: url('back.png');
-  background-position: center; /* Центрирует изображение */
-  background-repeat: no-repeat; /* Отключает повторение изображения */
+body {
+    background-image: url('back.png');
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-
