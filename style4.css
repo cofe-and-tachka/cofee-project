@@ -1,4 +1,4 @@
-/* Общие стили */
+/* Общие настройки */
 * {
     margin: 0;
     padding: 0;
@@ -6,63 +6,39 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ece0e0;
-    line-height: normal;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Блок приветствия с рамкой */
-.welcome-block {
-    background-color: #72482f;
-    padding: 10px;
-    border: 2px solid #bdbdc1;
-    border-radius: 0px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Небольшая тень */
-    text-align: center;
-}
-
-.welcome-block h1 {
-    color: #ffffff;
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.welcome-block p {
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* Реклама (изображение) */
-.advertisement img {
-    width: 100%; /* Растягиваем изображение на всю ширину родителя */
-    border-radius: 10px; /* Округлые углы */
-    object-fit: cover; /* Поддерживает соотношение сторон */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Небольшая тень */
-}
-
-/* Навигационное меню */
+/* Полупрозрачная навигационная панель */
 .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
     width: 100%;
-    background-color: #432818;
+    background-color: rgba(67, 40, 24, 0.9);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    backdrop-filter: blur(10px);
 }
 
-/* Логотип */
-.logo img {
-    height: 50px;
-    width: auto;
+/* Анимация логотипа */
+.anim-pulse {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
-/* Пункты меню */
+/* Меню навигации */
 .menu {
     list-style-type: none;
     margin: 0;
@@ -81,63 +57,71 @@ body {
     transition: all 0.3s ease;
 }
 
-.menu a:hover {
-    color: orange;
-}
-
+.menu a:hover,
 .active {
-    font-weight: bold;
+    color: #ffcc00;
 }
 
 .button {
-    background-color: #e09d30;
+    background-color: #ffcc00;
     padding: 10px 15px;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
 .button:hover {
-    background-color: #ce6000;
+    background-color: #ffae00;
 }
 
-/* Основной контейнер страницы */
+/* Основная структура страницы */
 .wrapper {
     display: flex;
     gap: 20px;
-    padding-top: 100px; /* Расстояние от навигационной панели */
-    padding-left: 16%; /* Левое поле */
-    padding-right: 5%; /* Правое поле */
+    padding-top: 20px;
+    padding-left: 16%;
+    padding-right: 5%;
 }
 
 .content {
     flex-grow: 1;
 }
 
+/* ⭐️ РАСШИРЕННАЯ БОКОВАЯ ПАНЕЛЬ ⭐️ */
 .sidebar {
-    width: 300px;
+    width: 350px;   /* Увеличили ширину панели */
     background-color: #68432c;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin-left: 20px; /* Небольшой отступ слева */
 }
 
 .sidebar h2 {
-    color: #fff9f9;
-    margin-bottom: 10px;
+    color: white; /* Теперь белый текст */
+    margin-bottom: 15px;
 }
 
 .sidebar form label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    color: white; /* Белый текст в форме */
+}
+
+.product-icon {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }
 
 .sidebar button {
     background-color: #fff8f8;
-    color: rgb(0, 0, 0);
+    color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .sidebar button:hover {
@@ -145,13 +129,33 @@ body {
 }
 
 .sidebar #totalAmount {
-    font-size: 18px;
-    color: rgb(255, 255, 255);
+    font-size: 20px;
+    color: white; /* Белые цифры итоговой суммы */
 }
 
-/* Футер */
+/* Панель рекламы */
+.advertisement {
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.advertisement h3 {
+    color: #68432c;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.advertisement p {
+    color: #333;
+    font-size: 16px;
+}
+
+/* Футер страницы */
 .footer {
-    background: #68432c;
+    background: linear-gradient(#68432c, #432818);
     color: white;
     padding: 40px 0px;
 }
@@ -170,64 +174,20 @@ body {
     margin: 10px;
 }
 
-.footer-column h3 {
-    margin-bottom: 15px;
+.social-icons a {
+    margin-right: 15px;
 }
 
-.footer-column p {
-    line-height: 1.6;
-    font-size: 14px;
-}
-
-.footer-column form {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-column input, .footer-column textarea {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 3px;
-}
-
-.footer-column button {
-    padding: 10px;
-    background-color: #6e685f;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.footer-column button:hover {
-    background-color: #f58c30;
-}
-
-.footer-bc {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #432818;
-    width: 100%;
+.icon {
+    width: 32px;
+    height: 32px;
 }
 
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 30px auto 0;
-}
-
-.footer-bottom .social-icons a {
-    margin-right: 30px;
-}
-
-.footer-bottom .social-icons img {
-    width: 32px;
-    height: 32px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
 }
 
 .footer-bottom p {
@@ -240,9 +200,15 @@ body {
     text-decoration: none;
 }
 
-body {
-    background-image: url('back.png');
-    background-position: center;
-    background-repeat: no-repeat;
+/* Радужный фон тела страницы */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50%, #e0dfde, #cac4ba);
+    opacity: 0.3;
+    z-index: -1;
 }
-
