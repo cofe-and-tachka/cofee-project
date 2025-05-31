@@ -13,7 +13,7 @@
     <div class="left">
         <div class="logo">
             <a href="index1.html">
-                <img class="anim" src="https://i.imgur.com/iXjeEeJ.png" alt="♨︎" height="50px" width="50px"/>
+                <img class="logo-img anim-pulse" src="https://i.imgur.com/iXjeEeJ.png" alt="♨️" height="50px" width="50px"/>
             </a>
         </div>
     </div>
@@ -23,7 +23,7 @@
             <li><a href="index1.html">Главная</a></li>
             <li><a href="index2.html" class="active">Меню</a></li>
             <li><a href="index3.html">Отзывы</a></li>
-            <li><a href="https://www.youtube.com/watch?v=Cxmvq1MCR3c" class="button">Заказать онлайн</a></li>
+            <li><a href="#" class="button">Заказать онлайн</a></li>
         </ul>
     </div>
 </nav>
@@ -31,23 +31,27 @@
 <div class="wrapper">
     <div class="content">
         <div class="welcome-block">
-            <h1>Добро пожаловать!</h1>
-            <p>Здесь вы можете ознакомиться с нашим ассортиментом кофе и заказать любимые напитки прямо здесь!</p>
+            <h1>Наш ассортимент</h1>
+            <p>Здесь вы найдете лучшие сорта кофе и другие вкусности!</p>
         </div>
-        
     </div>
 
+    <!-- Расширенная боковая панель -->
     <aside class="sidebar">
         <h2>Выбор товаров</h2>
         <form id="orderForm">
-            <label for="item1"><input type="checkbox" id="item1" data-price="100"> Товар №1 (100 руб.)</label><br>
-            <label for="item2"><input type="checkbox" id="item2" data-price="200"> Товар №2 (200 руб.)</label><br>
-            <label for="item3"><input type="checkbox" id="item3" data-price="300"> Товар №3 (300 руб.)</label><br>
+            <label for="item1"><img src="https://yucd1503.wordpress.com/wp-content/uploads/2015/09/www-1zoom-net.jpg" class="product-icon"/> Кофе Латте (100 руб.)</label><br>
+            <label for="item2"><img src="https://i.ebayimg.com/images/g/~qsAAOSwcRRiRt0U/s-l1600.jpg" class="product-icon"/> Капучино (200 руб.)</label><br>
+            <label for="item3"><img src="https://restoranvesta.ru/wp-content/uploads/2020/11/Amerikano_result-768x512.jpg" class="product-icon"/> Американо (300 руб.)</label><br>
             <hr>
             <strong>Итого:</strong> <span id="totalAmount">0 руб.</span>
             <br><br>
             <button type="button" onclick="placeOrder()">Оформить заказ</button>
         </form>
+        <section class="advertisement">
+            <h3>Специальное предложение!</h3>
+            <p>скидка при промокоде "kf239"</p>
+        </section>
     </aside>
 </div>
 
