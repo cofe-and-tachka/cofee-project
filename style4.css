@@ -94,6 +94,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     margin-left: 20px; /* Небольшой отступ слева */
+    color: white;
 }
 
 .sidebar h2 {
@@ -101,61 +102,60 @@ body {
     margin-bottom: 15px;
 }
 
-.sidebar form label {
-    display: block;
-    margin-bottom: 15px;
-    color: white; /* Белый текст в форме */
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
-.product-icon {
-    vertical-align: middle;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.products-table th,
+.products-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.products-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.products-table input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.total-sum {
+    margin-bottom: 20px;
+}
+
+.total-sum strong {
+    font-size: 18px;
+}
+
+#totalAmount {
+    font-size: 20px;
+    color: white;
 }
 
 .sidebar button {
-    background-color: #fff8f8;
+    background-color: #FFCC00;
     color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     font-size: 16px;
+    transition: all 0.3s ease;
 }
 
 .sidebar button:hover {
-    background-color: #bb9457;
-}
-
-.sidebar #totalAmount {
-    font-size: 20px;
-    color: white; /* Белые цифры итоговой суммы */
-}
-
-/* Панель рекламы */
-.advertisement {
-    background-color: #fafafa;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.advertisement h3 {
-    color: #68432c;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.advertisement p {
-    color: #333;
-    font-size: 16px;
+    background-color: #FFAE00;
 }
 
 /* Футер страницы */
 .footer {
-    background: linear-gradient(#68432c, #432818);
+    background: #79553C;
     color: white;
     padding: 40px 0px;
 }
@@ -174,24 +174,69 @@ body {
     margin: 10px;
 }
 
-.social-icons a {
-    margin-right: 15px;
+.footer-column h3 {
+    margin-bottom: 15px;
 }
 
-.icon {
+.footer-column p {
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.footer-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column input,
+.footer-column textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+.footer-column button {
+    padding: 10px;
+    background-color: #BB9457;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.footer-column button:hover {
+    background-color: #F58C30;
+}
+
+.footer-bc {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #432818;
+    width: 100%;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 30px auto 0;
+}
+
+.footer-bottom .social-icons a {
+    margin-right: 30px;
+}
+
+.footer-bottom .social-icons img {
     width: 32px;
     height: 32px;
 }
 
-.footer-bottom {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    width: 100%;
-}
-
 .footer-bottom p {
-    color: #ffffff;
+    color: #CCC;
     font-size: 13px;
 }
 
@@ -208,118 +253,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 50%, #e0dfde, #cac4ba);
+    background: radial-gradient(circle at 50%, #E0DFDE, #CAC4BA);
     opacity: 0.3;
     z-index: -1;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer {
-  background: #79553c;
-  color: white;
-  padding: 40px 0px;
-}
-  
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-  
-.footer-column {
-  flex: 1;
-  min-width: 250px;
-  margin: 10px;
-}
-  
-.footer-column h3 {
-  margin-bottom: 15px;
-}
-  
-.footer-column p {
-  line-height: 1.6;
-  font-size: 14px;
-}
-  
-.footer-column form {
-  display: flex;
-  flex-direction: column;
-}
-  
-.footer-column input,
-.footer-column textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 3px;
-}
-  
-.footer-column button {
-  padding: 10px;
-  background-color: #BB9457;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-  
-.footer-column button:hover {
-  background-color: #f58c30;
-}
-  
-.footer-bc{
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #432818;
-    width: 100%;
-}
-  
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 30px auto 0;
-}
-  
-.footer-bottom .social-icons a {
-  margin-right: 30px;
-}
-  
-.footer-bottom .social-icons img {
-  width: 32px;
-  height: 32px;
-}
-  
-.footer-bottom p {
-  color: #ccc;
-  font-size: 13px;
-}
-  
-.footer-bottom a {
-  color: white;
-  text-decoration: none;
 }
