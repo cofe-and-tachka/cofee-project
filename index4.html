@@ -36,22 +36,36 @@
         </div>
     </div>
 
-    <!-- Расширенная боковая панель -->
+    <!-- ЛЕВАЯ СТОРОНА: Боковая панель -->
     <aside class="sidebar">
         <h2>Выбор товаров</h2>
-        <form id="orderForm">
-            <label for="item1"><img src="https://yucd1503.wordpress.com/wp-content/uploads/2015/09/www-1zoom-net.jpg" class="product-icon"/> Кофе Латте (100 руб.)</label><br>
-            <label for="item2"><img src="https://i.ebayimg.com/images/g/~qsAAOSwcRRiRt0U/s-l1600.jpg" class="product-icon"/> Капучино (200 руб.)</label><br>
-            <label for="item3"><img src="https://restoranvesta.ru/wp-content/uploads/2020/11/Amerikano_result-768x512.jpg" class="product-icon"/> Американо (300 руб.)</label><br>
-            <hr>
-            <strong>Итого:</strong> <span id="totalAmount">0 руб.</span>
-            <br><br>
-            <button type="button" onclick="placeOrder()">Оформить заказ</button>
-        </form>
-        <section class="advertisement">
-            <h3>Специальное предложение!</h3>
-            <p>скидка при промокоде "kf239"</p>
+        <table class="products-table">
+            <tr>
+                <th>Название</th>
+                <th>Цена</th>
+                <th>Количество</th>
+            </tr>
+            <tr>
+                <td>Кофе Латте</td>
+                <td>100 руб.</td>
+                <td><input type="number" value="0" /></td>
+            </tr>
+            <tr>
+                <td>Капучино</td>
+                <td>200 руб.</td>
+                <td><input type="number" value="0" /></td>
+            </tr>
+            <tr>
+                <td>Американо</td>
+                <td>300 руб.</td>
+                <td><input type="number" value="0" /></td>
+            </tr>
+        </table>
+        <section class="total-sum">
+            <h3>Итоговая сумма</h3>
+            <strong>Всего:</strong> <span id="totalAmount">0 руб.</span>
         </section>
+        <button type="button" onclick="placeOrder()">Оформить заказ</button>
     </aside>
 </div>
 
@@ -67,7 +81,7 @@
         <div class="footer-column">
             <h3>Контакты</h3>
             <p>☎ +7(977)966-61-98</p>
-            <p>⚑ г. Домодедово, Каширское шоссе, 3А</p>
+            <p>⚑ г. Домодедово, ул. Рабочая, 3А</p>
             <p>♨ cofeco.com</p>
             <p>✉ cofeco.feedback@gmail.com</p>
             <p>🛈 Часы работы: пн-пт 8:00–21:00, сб-вс 8:00–23:00</p>
