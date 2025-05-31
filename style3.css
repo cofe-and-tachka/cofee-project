@@ -193,14 +193,24 @@ h3 {
 
 
 
+.partner {
+    background: linear-gradient(to bottom, #1a1a1a, #2b2b2b);
+    padding-bottom: 40px;
 
+}
 
+.partner h1 {
+    text-align: center;
+    color: #c8ae8b;
+    font-size: 28px;
+    margin-bottom: 20px;
+    padding-top: 60px;
+}
 
 
 
 
 .partner-otz {
-    background: linear-gradient(to bottom, #1a1a1a, #2b2b2b);
     display: flex;
     justify-content: center;
     align-items: center;
