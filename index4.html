@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кофейня | Главная страница</title>
+    <title>Кофейня | Корзина</title>
     <link rel="stylesheet" href="style4.css">
 </head>
 <body>
@@ -31,14 +31,13 @@
 <div class="wrapper">
     <div class="content">
         <div class="welcome-block">
-            <h1>Наш ассортимент</h1>
-            <p>Здесь вы найдете лучшие сорта кофе и другие вкусности!</p>
+           
         </div>
     </div>
 
-    <!-- ЛЕВАЯ СТОРОНА: Боковая панель -->
-    <aside class="sidebar">
-        <h2>Выбор товаров</h2>
+    <!-- ЛЕВАЯ СТОРОНА: Товары и Адрес доставки -->
+    <aside class="sidebar-left">
+        <h2>Товары</h2>
         <table class="products-table">
             <tr>
                 <th>Название</th>
@@ -47,24 +46,55 @@
             </tr>
             <tr>
                 <td>Кофе Латте</td>
-                <td>100 руб.</td>
-                <td><input type="number" value="0" /></td>
+                <td>200 руб.</td>
+                <td><input type="number" value="1" /></td>
             </tr>
             <tr>
                 <td>Капучино</td>
                 <td>200 руб.</td>
-                <td><input type="number" value="0" /></td>
+                <td><input type="number" value="1" /></td>
             </tr>
             <tr>
-                <td>Американо</td>
-                <td>300 руб.</td>
-                <td><input type="number" value="0" /></td>
+                <td>Тирамису</td>
+                <td>400 руб.</td>
+                <td><input type="number" value="1" /></td>
             </tr>
         </table>
+        
+        <h3>Адрес доставки</h3>
+        <label for="addressCity">Город:</label>
+        <input type="text" id="addressCity" placeholder="Москва" />
+        <br /><br />
+        
+        <label for="addressStreet">Улица:</label>
+        <input type="text" id="addressStreet" placeholder="Ленинградская" />
+        <br /><br />
+        
+        <label for="addressHouse">Дом:</label>
+        <input type="text" id="addressHouse" placeholder="12" />
+        <br /><br />
+        
+        <label for="addressApartment">Квартира:</label>
+        <input type="text" id="addressApartment" placeholder="34" />
+        <br /><br />
+    </aside>
+
+    <!-- ПРАВАЯ СТОРОНА: Акции и Итоговая сумма -->
+    <aside class="sidebar-right">
+        <h2>Акции</h2>
+        <label for="promoCode">Промокод:</label>
+        <input type="text" id="promoCode" placeholder="Введите промокод" />
+        <br /><br />
+        
+        <label for="giftCertificate">Сертификат:</label>
+        <input type="text" id="giftCertificate" placeholder="Номер подарочного сертификата" />
+        <br /><br />
+        
         <section class="total-sum">
             <h3>Итоговая сумма</h3>
-            <strong>Всего:</strong> <span id="totalAmount">0 руб.</span>
+            <strong>Всего:</strong> <span id="totalAmount">800 руб.</span>
         </section>
+        
         <button type="button" onclick="placeOrder()">Оформить заказ</button>
     </aside>
 </div>
