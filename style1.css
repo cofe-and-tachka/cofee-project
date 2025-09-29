@@ -8,7 +8,7 @@
 body {
   font-family: "PT Sans Caption", sans-serif;
   background-color: #f4f3ee;
-  color: #ffffff; /* Коричневый цвет текста */
+  color: #f4f3ee; /* Коричневый цвет текста */
   background-image: url('back2.png');
   background-position: center; /* Центрирует изображение */
   background-repeat: no-repeat; /* Отключает повторение изображения */
