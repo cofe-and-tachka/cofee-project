@@ -6,78 +6,109 @@
 }
 
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    background-color: #ffffff;
+    font-family: "PT Sans Caption", sans-serif;
     color: #333;
-    line-height: 1.6;
-}
+    background-color: rgb(0, 0, 0);
+    background-image: url('back.png');
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Отключает повторение изображения */
+  }
 
 /* Полупрозрачная навигационная панель */
+
 .navbar {
-    position: sticky;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+    user-select: none;
+    position: fixed;
     width: 100%;
-    background-color: rgba(67, 40, 24, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    backdrop-filter: blur(10px);
-}
-
-/* Логотип */
-.logo-img {
-    animation: pulse 2s infinite;
-}
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
-/* Меню навигации */
-.menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.menu li {
-    margin-right: 20px;
-}
-
-.menu a {
-    text-decoration: none;
+    background-color: #432818;
+    display: flex; /* Используем Flexbox для размещения элементов */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    justify-content: space-between; /* Размещаем элементы по краям */
+    padding: 10px; /*50px; Добавляем отступы для удобства */
+  }
+    
+  /* Логотип */
+  .logo {
+    display: flex; /* Используем Flexbox для размещения элементов */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    cursor: pointer;
+    height: 50px; /* Высота изображения */
+    width: auto; /* Автоматическая ширина (чтобы сохранить пропорции) */
     color: white;
+    font-size: 24px;
+  }
+  
+  .anim {
+  transition-property: transform;
+  transition: transform .1s ease-in-out;
+  }
+    
+  .anim:hover{
+    transition: transform .1s ease-in-out;
+    transform: scale(1.1);
+  }
+    
+  .logo-text {
+    display: flex; /* Используем Flexbox для размещения элементов */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    font-size: 20px;
+    color: #a67c52;
+    margin-left: 10px;
+  }
+    
+    
+    /* Меню */
+  .menu {
+    list-style-type: none; /* Убираем маркеры списка */
+    margin: 0; /* Сбрасываем внешние отступы */
+    padding: 0; /* Сбрасываем внутренние отступы */
+    display: flex; /* Располагаем пункты меню горизонтально */
+  }
+  
+    
+    
+  .menu li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+  }
+    
+  .menu a {
+    color: white;
+    text-decoration: none;
     font-size: 16px;
+  }
+    
+  .color-txt {
+    color: white;
     transition: all 0.3s ease;
-}
-
-.menu a:hover,
-.active {
-    color: #ffcc00;
-}
-
-.button {
-    background-color: #ffcc00;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.button:hover {
-    background-color: #ffae00;
-}
+  }
+  
+  .color-txt:hover {
+    color: #f58c30;
+  }
+  
+  
+  .button {
+      background-color: #BB9457;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+      background-color: #f58c30;
+  }
 
 /* Основная структура страницы */
 .wrapper {
     display: flex;
     gap: 20px;
-    padding-top: 29px;
+    padding-top: 120px;
     padding-left: 5%;
     padding-right: 10%;
     padding-bottom: 5%;
